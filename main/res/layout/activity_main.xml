@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.mybrowser.MainActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/input"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/netAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:background="@android:drawable/alert_light_frame"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"
+            android:textColor="#888" />
+
+        <Button
+            android:id="@+id/openNetAddress"
+            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:text="搜索"
+            android:onClick="go"/>
+    </LinearLayout>
+
+    <ProgressBar android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_gravity="top"
+        android:visibility="gone"
+        android:layout_below="@+id/input"
+        style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/buttonGroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:alpha="10">
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="26dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/back1"
+            android:onClick="back" />
+        <ImageButton
+            android:id="@+id/forward"
+            android:layout_width="26dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/forward1"
+            android:onClick="forward"/>
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="26dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu"
+            android:onClick="menu"/>
+        <ImageButton
+            android:id="@+id/main"
+            android:layout_width="26dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/home"
+            android:onClick="mainwin"/>
+        <ImageButton
+            android:id="@+id/newwin"
+            android:layout_width="26dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/newwin"
+            android:onClick="newwin"/>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/input" />
+</RelativeLayout>

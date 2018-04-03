@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="主页设置">
+        <Preference android:key="skin"
+            android:title="皮肤选择"
+            android:summary="自定义主页皮肤">
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="网页设置">
+        <ListPreference android:key="picture_dis"
+            android:title="无图模式"
+            android:summary="设置网页无图节省流量"
+            android:entries="@array/picture_dis_array"
+            android:entryValues="@array/values"
+            android:defaultValue="3">
+        </ListPreference>
+        <SwitchPreference android:key="no_trace"
+            android:title="无痕浏览"
+            android:summary="不会留下你的浏览痕迹"
+            android:defaultValue="false">
+        </SwitchPreference>
+        <ListPreference android:key="text_size"
+            android:title="字体大小"
+            android:summary="设置字体大小"
+            android:entries="@array/text_size_array"
+            android:entryValues="@array/values"
+            android:defaultValue="3">
+        </ListPreference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="缓存">
+        <Preference android:key="clear"
+            android:title="清除缓存"
+            android:summary="清除系统缓存">
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="系统设置">
+        <SwitchPreference android:key="cache"
+            android:title="启动网页缓存"
+            android:summary="启动可加快浏览速度"
+            android:defaultValue="false">
+        </SwitchPreference>
+        <SwitchPreference android:key="javascript"
+            android:title="启用JavaScript"
+            android:summary="启用JavaScript脚本分析"
+            android:defaultValue="true">
+        </SwitchPreference>
+    </PreferenceCategory>
+</PreferenceScreen>

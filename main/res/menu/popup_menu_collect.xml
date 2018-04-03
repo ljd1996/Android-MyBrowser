@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/copy_collect"
+        android:title="复制链接">
+    </item>
+    <item android:id="@+id/change_collect"
+        android:title="修改书签">
+    </item>
+    <item android:id="@+id/delete_collect"
+        android:title="删除书签">
+    </item>
+</menu>

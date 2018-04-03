@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/c_h_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/collect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="收藏"
+            android:textSize="20sp"
+            android:background="@drawable/button_click_select"
+            android:onClick="collect_button"/>
+
+        <Button
+            android:id="@+id/history"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/hisotry"
+            android:textSize="20sp"
+            android:background="@drawable/button_click_select"
+            android:onClick="history_button"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/favoritesAndHisotry_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/c_h_button">
+
+        <ListView
+            android:id="@+id/collect_show"
+            android:layout_width="match_parent"
+            android:layout_height="398dp"
+            android:dividerHeight="1dp">
+        </ListView>
+
+        <ListView
+            android:id="@+id/history_show"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:dividerHeight="1dp"
+            android:visibility="gone">
+        </ListView>
+
+        <TextView
+            android:id="@+id/no_tip"
+            android:layout_width="match_parent"
+            android:layout_height="438dp"
+            android:text="当前无记录"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/favoritesAndHisotry_content">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:id="@+id/clear_c_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清空"
+
+                android:background="@drawable/button_enable_select"
+                android:onClick="clear_ch"/>
+            <Button
+                android:id="@+id/delete_c_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:background="@color/rgb"
+                android:visibility="gone"
+                android:onClick="delete_ch"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:id="@+id/edit_c_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="编辑"
+                android:background="@drawable/button_enable_select"
+                android:onClick="select_ch"/>
+            <Button
+                android:id="@+id/cancel_c_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:background="@color/rgb"
+                android:visibility="gone"
+                android:onClick="cancel_ch"/>
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

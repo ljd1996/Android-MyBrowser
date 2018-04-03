@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/dialog_fileName"
+    android:background="@drawable/dialog_back"
+    android:orientation="horizontal"
+    android:weightSum="1">
+    <TextView
+        android:id="@+id/dialog_fileName_title"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:text="@string/fileName"
+        android:textSize="15sp"
+        android:singleLine="true"
+        android:layout_weight="0.72" />
+
+    <EditText
+        android:id="@+id/dialog_fileName_input"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:drawable/alert_light_frame"
+        android:hint="@string/blank"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/houzhui"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp" />
+</LinearLayout>

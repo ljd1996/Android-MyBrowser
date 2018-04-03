@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="home_array">
+        <item>默认</item>
+        <item>好123</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="picture_dis_array">
+        <item>始终无图</item>
+        <item>仅数据流量下无图</item>
+        <item>退出无图模式</item>
+    </string-array>
+    <string-array name="text_size_array">
+        <item>最小</item>
+        <item>较小</item>
+        <item>正常</item>
+        <item>较大</item>
+        <item>最大</item>
+    </string-array>
+    <string-array name="values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>
